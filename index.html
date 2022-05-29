@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/index.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors | developed by Isaac Urdaneta</title>
+  <style>
+    
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+#root{
+
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgb(2,0,36);
+  background: linear-gradient(164deg, rgba(2,0,36,1) 0%, rgba(16,16,195,0.7231267507002801) 88%, rgba(0,212,255,1) 100%);
+  padding: 1.5rem 2rem;
+}
+
+.score{
+
+  max-width: 900px;
+  min-width: 300px;
+  color: white;
+  margin: 0 auto;
+  padding: .5rem 1rem ;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.img-play{
+
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* .img-play:hover{
+
+  width: 100px;
+  height: 100px;
+} */
+
+.play{
+
+  max-width: 700px;
+  min-width: 250px;
+  margin: 2rem auto;
+  padding-top: 1rem;
+}
+
+.paper{
+
+  border: 12px solid #ec9e0e;
+}
+
+.rock{
+
+  border: 12px solid #4865f4;
+}
+
+.scissors{
+
+  border: 12px solid #dc2e4e;
+}
+
+.btn-rules{
+
+  padding: .8rem 1.3rem;
+  background-color: transparent;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+
+}
+
+.btn-rules:hover{
+
+  background-color: white;
+  color: black;
+}
+
+.house-picked{
+
+  position:relative;
+}
+
+.animation{
+
+  width: 130px;
+  height: 130px;
+  background-color: #2c2a2e80;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+
+/* effects with scale */
+
+.effect-scale{
+
+animation: agrandar 1.5s alternate .5s infinite ;
+}
+
+
+
+@keyframes agrandar {
+
+0%{
+
+  transform: scale(.4);
+}
+
+
+
+25%{
+
+  transform: scale(.8);
+}
+
+50%{
+
+  transform: scale(1.2);
+}
+
+75%{
+
+  transform: scale(.8);
+}
+
+100%{
+
+  transform: scale(.4);
+}
+}
+
+.play-again:hover{
+
+color: red;
+}
+  </style>
+</head>
+<body>
+
+  <main id="root">
+
+    <!-- Score -->
+
+    <!-- <div class="score">
+      <div class="row">
+
+        <div class="col-6">
+          <div>
+            <h2>Rock</h2>
+            <h2>Paper</h2>
+            <h2>Scissors</h2>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div style="background-color: white; width:100%; height: 100%; border-radius: 20px; color: black; padding: 1rem;">
+            <p style="text-align: center; margin-bottom: 1rem; color: hsl(229, 64%, 46%); font-size: 1rem;">
+              Score
+            </p>
+
+            <div class="row">
+              <div class="col-12" style="text-align: center;">
+                Computer:
+                <p>12</p>
+              </div>
+              <div class="col-12" style="text-align: center;">
+                Visitor:
+                <p>23</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Visualization desktop -->
+
+
+    <!-- <div class="play" style="color: white;">
+
+      <div class="row">
+
+        <div class="col-6">
+          
+          <div class="img-play paper">
+            <img src="./images/icon-paper.svg" alt="paper">
+          </div>
+
+        </div>
+
+        <div class="col-6">
+          
+          <div class="img-play scissors">
+            <img src="./images/icon-scissors.svg" alt="Scissors">
+          </div>
+
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="img-play rock">
+            <img src="./images/icon-rock.svg" alt="Rock">
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- Picked -->
+
+    <!-- <div class="picked pt-3">
+
+      <div class="row">
+
+        <div class="col-6" style="text-align: center;"> 
+          <h2 style="color: white; font-size: 1rem;" class="mb-4">You Picked</h2>
+
+          <div class="img-play paper">
+            <img src="./images/icon-paper.svg" alt="paper">
+          </div>
+        </div>
+        <div class="col-6 house-picked" style="text-align: center;">
+          <h2 style="color: white; font-size: 1rem;" class="mb-4">House Picked</h2>
+
+          <div class="animation effect-scale">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> -->
+
+    <!-- <div class="victory pt-3">
+      <div class="row">
+        <div class="col-6" style="text-align: center;">
+          <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
+
+          <div class="img-play paper">
+            <img src="./images/icon-paper.svg" alt="paper">
+          </div>
+        </div>
+
+        <div class="col-6" style="text-align: center;">
+          <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
+
+          <div class="img-play paper">
+            <img src="./images/icon-paper.svg" alt="paper">
+          </div>
+        </div>
+
+        <div class="col-12 mt-4"  style="text-align: center;">
+          <h2 style="text-align: center; color: white; font-size: 2.5em;">I`ts Draw</h2>
+
+          <div class="btn mt-1 play-again">
+            Play Again
+          </div>
+
+        </div>
+
+      </div>
+    </div> -->
+
+    <div class="rules pt-2 mt-4" style="display: flex; justify-content: start;">
+      <a class="btn-rules" style="margin: 0 auto;">
+        Rules
+      </a>
+      
+    </div>
+    <span style="color: white; display: block; margin-top: 3rem;">This project is developed with love by <a href="#" style="color: rgb(228, 224, 22);">Isaac Urdaneta</a></span>
+  </main>
+  
+  <script src="./index.js" type="module"></script>
+
+</body>
+</html>

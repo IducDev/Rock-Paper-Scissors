@@ -11,20 +11,20 @@ const cardsToPlay=()=>{
             <div class="col-6">
             
                 <div class="img-play paper">
-                    <img src="./images/icon-paper.svg" alt="paper">
+                    <img src="./images/document.png" alt="paper">
                 </div>
 
             </div>
 
             <div class="col-6">
                 <div class="img-play scissors">
-                    <img src="./images/icon-scissors.svg" alt="Scissors">
+                    <img src="./images/scissors.png" alt="Scissors">
                 </div>
             </div>
 
             <div class="col-12 mt-2">
                 <div class="img-play rock">
-                    <img src="./images/icon-rock.svg" alt="Rock">
+                    <img src="./images/stone.png" alt="Rock">
                 </div>
             </div>
         </div>

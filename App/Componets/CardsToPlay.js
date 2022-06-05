@@ -5,34 +5,31 @@ const cardsToPlay=()=>{
     play.classList.add("play");
     play.style.color="white";
     play.innerHTML=`
-
         <div class="row">
 
-            <div class="col-6">
+            <div class="col-6" >
             
-                <div class="img-play paper">
-                    <img src="./images/document.png" alt="paper">
+                <div class="img-play paper" >
+                    <img src="./images/document.png" alt="paper" id="paper">
                 </div>
 
             </div>
 
-            <div class="col-6">
-                <div class="img-play scissors">
-                    <img src="./images/scissors.png" alt="Scissors">
+            <div class="col-6" >
+                <div class="img-play scissors" >
+                    <img src="./images/scissors.png" alt="Scissors" id="scissors">
                 </div>
             </div>
 
-            <div class="col-12 mt-2">
-                <div class="img-play rock">
-                    <img src="./images/stone.png" alt="Rock">
+            <div class="col-12 mt-2" >
+                <div class="img-play rock" >
+                    <img src="./images/stone.png" alt="Rock" id="rock">
                 </div>
             </div>
         </div>
     
     `;
-
     return play;
-
 }
 
 

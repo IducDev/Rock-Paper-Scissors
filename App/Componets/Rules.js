@@ -11,7 +11,9 @@ const Rules =()=>{
         Rules
         </a>
     </div>
-    <span style="color: white; display: block; margin-top: 3rem;">This project is developed with love by <a href="#" style="color: rgb(228, 224, 22);">Isaac Urdaneta</a></span>
+    <span style="color: white; display: block; margin-top: 3rem;">This project is developed with love by 
+    <a href="https://github.com/IducSoft" target="_blank" style="color: rgb(228, 224, 22);">Isaac Urdaneta</a>
+    </span>
     `;
     return rules;
 }

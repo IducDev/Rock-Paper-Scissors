@@ -3,7 +3,6 @@ import RenderPicked from "./App/RenderPicked.js";
 
 
 document.addEventListener("DOMContentLoaded", (e)=>{
-
     App();
 });
 
@@ -12,5 +11,10 @@ document.addEventListener("click", (e)=>{
 
         console.log(e.target)
         RenderPicked(e.target.id)
+    }
+
+    if(e.target.id=="play-again"){
+
+        location.reload();
     }
 })

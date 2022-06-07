@@ -1,13 +1,20 @@
 import Picked from "./Componets/Picked.js";
+import Victory from "./Componets/Victory.js";
 
 
 
-const RenderPicked =(e)=>{
+const RenderPicked =(card)=>{
 
-    const $root = document.getElementById("root"), 
+    let $root = document.getElementById("root"), 
     childNo = document.getElementById("root").childNodes[1];
-    $root.replaceChild(Picked(e), childNo)
-    console.log(e)
+    $root.replaceChild(Picked(card), childNo);
+    childNo = document.getElementById("root").childNodes[1];
+    setTimeout(()=>{
+
+        $root.replaceChild(Victory(card), childNo);
+        // console.log(card)
+        
+    }, 5000)
 }
 
 export default RenderPicked;

@@ -1,6 +1,5 @@
 
 const Picked=(card)=>{
-
     let picked = document.createElement("div");
     picked.classList.add("picket", "pt-3", "mt-3");
     if(card=="paper"){
@@ -71,11 +70,6 @@ const Picked=(card)=>{
         </div>
         `;
     }
-
-    
-
-    
-
     return picked;
 }
 

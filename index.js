@@ -15,6 +15,7 @@ document.addEventListener("click", (e)=>{
 
     if(e.target.id=="play-again"){
 
-        location.reload();
+        // location.reload();
+        App();
     }
 })

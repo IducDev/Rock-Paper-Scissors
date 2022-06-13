@@ -1,3 +1,6 @@
+import modifiedScore from "../ModifiedScore.js";
+
+
 
 const Victory =(card)=>{
 
@@ -53,7 +56,6 @@ const Victory =(card)=>{
         // Win
 
         victory.innerHTML=`
-
             <div class="victory pt-3">
                 <div class="row">
                     <div class="col-6" style="text-align: center;">
@@ -80,6 +82,9 @@ const Victory =(card)=>{
                 </div>
             </div>
         `;
+
+        // Aqui se invoca la funcion que modifica la puntuación en el localStorage y repinta los puntos en pantalla
+        modifiedScore(1,0)
 
     }else if(card =="paper" && cardComputer=="scissors"){
 
@@ -114,6 +119,7 @@ const Victory =(card)=>{
                 </div>
             </div>
         `;
+        modifiedScore(0,1)
 
     }else if(card =="paper" && cardComputer=="paper"){
 
@@ -183,38 +189,42 @@ const Victory =(card)=>{
                 </div>
             </div>
         `;
+        modifiedScore(0,1)
+
     }else if(card =="rock" && cardComputer=="scissors"){
 
         // win
 
         victory.innerHTML=`
 
-        <div class="victory pt-3">
-            <div class="row">
-                <div class="col-6" style="text-align: center;">
-                    <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
+            <div class="victory pt-3">
+                <div class="row">
+                    <div class="col-6" style="text-align: center;">
+                        <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
 
-                    ${cardsToRender.rock}
-                </div>
+                        ${cardsToRender.rock}
+                    </div>
 
-                <div class="col-6" style="text-align: center;">
-                    <h2 style="color: white; font-size: 1rem;" class="mb-2">Computer Picked</h2>
+                    <div class="col-6" style="text-align: center;">
+                        <h2 style="color: white; font-size: 1rem;" class="mb-2">Computer Picked</h2>
 
-                    ${cardsToRender.scissors}
-                </div>
+                        ${cardsToRender.scissors}
+                    </div>
 
-                <div class="col-12 mt-4"  style="text-align: center;">
-                    <h2 style="text-align: center; color: white; font-size: 2.5em;">You Win</h2>
+                    <div class="col-12 mt-4"  style="text-align: center;">
+                        <h2 style="text-align: center; color: white; font-size: 2.5em;">You Win</h2>
 
-                    <div class="btn mt-1 play-again" id="play-again">
-                        Play Again
+                        <div class="btn mt-1 play-again" id="play-again">
+                            Play Again
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
-    `;
+        `;
+        modifiedScore(1,0)
+
     }else if(card=="rock" && cardComputer=="rock"){
 
 
@@ -258,64 +268,67 @@ const Victory =(card)=>{
 
         victory.innerHTML=`
 
-        <div class="victory pt-3">
-            <div class="row">
-                <div class="col-6" style="text-align: center;">
-                    <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
+            <div class="victory pt-3">
+                <div class="row">
+                    <div class="col-6" style="text-align: center;">
+                        <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
 
-                    ${cardsToRender.scissors}
-                </div>
+                        ${cardsToRender.scissors}
+                    </div>
 
-                <div class="col-6" style="text-align: center;">
-                    <h2 style="color: white; font-size: 1rem;" class="mb-2">Computer Picked</h2>
+                    <div class="col-6" style="text-align: center;">
+                        <h2 style="color: white; font-size: 1rem;" class="mb-2">Computer Picked</h2>
 
-                    ${cardsToRender.paper}
-                </div>
+                        ${cardsToRender.paper}
+                    </div>
 
-                <div class="col-12 mt-4"  style="text-align: center;">
-                    <h2 style="text-align: center; color: white; font-size: 2.5em;">You Win</h2>
+                    <div class="col-12 mt-4"  style="text-align: center;">
+                        <h2 style="text-align: center; color: white; font-size: 2.5em;">You Win</h2>
 
-                    <div class="btn mt-1 play-again" id="play-again">
-                        Play Again
+                        <div class="btn mt-1 play-again" id="play-again">
+                            Play Again
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
-    `;
+        `;
+        modifiedScore(1,0);
+
     }else if(card=="scissors" && cardComputer=="rock"){
 
         // Lose
 
         victory.innerHTML=`
 
-        <div class="victory pt-3">
-            <div class="row">
-                <div class="col-6" style="text-align: center;">
-                    <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
+            <div class="victory pt-3">
+                <div class="row">
+                    <div class="col-6" style="text-align: center;">
+                        <h2 style="color: white; font-size: 1rem;" class="mb-2">You Picked</h2>
 
-                    ${cardsToRender.scissors}
-                </div>
+                        ${cardsToRender.scissors}
+                    </div>
 
-                <div class="col-6" style="text-align: center;">
-                    <h2 style="color: white; font-size: 1rem;" class="mb-2">Computer Picked</h2>
+                    <div class="col-6" style="text-align: center;">
+                        <h2 style="color: white; font-size: 1rem;" class="mb-2">Computer Picked</h2>
 
-                    ${cardsToRender.rock}
-                </div>
+                        ${cardsToRender.rock}
+                    </div>
 
-                <div class="col-12 mt-4"  style="text-align: center;">
-                    <h2 style="text-align: center; color: white; font-size: 2.5em;">You Win</h2>
+                    <div class="col-12 mt-4"  style="text-align: center;">
+                        <h2 style="text-align: center; color: white; font-size: 2.5em;">You Win</h2>
 
-                    <div class="btn mt-1 play-again" id="play-again">
-                        Play Again
+                        <div class="btn mt-1 play-again" id="play-again">
+                            Play Again
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
-    `;
+            `;
+        modifiedScore(0,1)
     }else if(card=="scissors" && cardComputer=="scissors"){
 
         // it´s draw

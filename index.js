@@ -18,4 +18,10 @@ document.addEventListener("click", (e)=>{
         // location.reload();
         App();
     }
+
+    if(e.target.matches(".btn-rules")){
+
+        window.localStorage.clear();
+        App();
+    }
 })

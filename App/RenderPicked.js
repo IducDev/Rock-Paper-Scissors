@@ -14,7 +14,7 @@ const RenderPicked =(card)=>{
         $root.replaceChild(Victory(card), childNo);
         // console.log(card)
         
-    }, 5000)
+    }, 3000)
 }
 
 export default RenderPicked;
